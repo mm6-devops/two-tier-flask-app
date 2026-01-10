@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Login System{% endblock %}
+
+{% block content %}
+    <h1>Welcome, {{ username }}!</h1>
+    
+    <div style="text-align: center; margin-top: 40px;">
+        <p style="font-size: 18px; color: #666; margin-bottom: 30px;">
+            You are successfully logged in.
+        </p>
+        
+        <a href="{{ url_for('logout') }}" style="
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: transform 0.2s;
+        " onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+            Logout
+        </a>
+    </div>
+{% endblock %}
